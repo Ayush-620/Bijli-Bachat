@@ -1,111 +1,90 @@
-# Bijli-Bachat
-☀️ Solar Panel Cost & ROI Calculator (Sales Enablement Tool)
+# ☀️ Solar Panel Cost & ROI Calculator (Sales Enablement Tool)
 
-A rapid prototype web application designed to help visualize solar panel cost savings and return on investment (ROI). This tool demonstrates how long-term solar adoption compares against rising electricity costs, with a focus on real-world Indian market assumptions.
+A rapid prototype web application designed to visualize solar panel costs, savings, and return on investment (ROI).  
+This project focuses on comparing the long-term cost of grid electricity with the one-time investment in solar, using realistic Indian market assumptions.
 
-This project was built for practice purposes and significantly enhanced my understanding of front-end development, business logic implementation, and hands-on problem solving through a real-world use case.
+This tool was built **for practice purposes**, and it greatly enhanced my knowledge in front-end development, business logic implementation, and hands-on real-world problem solving.
 
-🚀 Key Features
+---
 
-Minimal Input Flow
-Clean and distraction-free interface to capture the customer's current monthly electricity bill.
+## 🚀 Key Features
 
-The "Freedom Date"
-Calculates the exact month and year when the solar investment breaks even, instead of showing generic ROI percentages.
+- **Minimal Input Flow**  
+  A clean, distraction-free interface to capture the user’s current monthly electricity bill.
 
-Inflation Reality Check
-Visual comparison between:
+- **The “Freedom Date”**  
+  Calculates the exact **month and year** when the solar investment breaks even, instead of using abstract ROI percentages.
 
-Flat solar system cost
+- **Inflation Reality Check**  
+  Interactive graph comparing:
+  - Flat cost of solar installation  
+  - Rising cost of grid electricity over 15 years using compound inflation
 
-Rising grid electricity bills over 15 years (compound inflation)
+- **Smart System Sizing**  
+  Automatically recommends:
+  - **3kW system** for lower consumption  
+  - **5kW system** for higher consumption  
+  (Based on standard Indian residential usage)
 
-Smart System Sizing
-Automatically recommends:
+- **Subsidy Calculator**  
+  Built-in logic for **PM Surya Ghar (Central)** and State-level subsidies to show the **actual final payable cost**.
 
-3kW system for lower consumption
+- **Viral Share Feature**  
+  Generates a WhatsApp-ready savings summary that users can easily share with family or decision-makers.
 
-5kW system for higher consumption
-(Based on standard Indian residential usage patterns)
+---
 
-Subsidy Calculator
-Built-in logic for PM Surya Ghar (Central) and State-level subsidies to display the actual payable amount.
+## 🛠️ Tech Stack
 
-Viral Share Feature
-Generates a WhatsApp-ready savings summary that users can share with family or decision-makers.
+- **HTML5**
+- **CSS3 (Bootstrap 5)**
+- **JavaScript (Vanilla)**
+- **Chart.js** – Data visualization
+- **Local Storage** – Persist configuration and sales settings
 
-🛠️ Tech Stack & Methodology
-Technologies Used
+---
 
-HTML5
+## 🧮 Logic & Calculations
 
-CSS3 (Bootstrap 5)
+### System Sizing
+- Usage **< 450 units/month** → **3kW System**
+- Usage **> 450 units/month** → **5kW System**
 
-JavaScript (Vanilla)
+### Financial Projection
+- Uses compound interest formula:
+- Projects the “Cost of Doing Nothing” (grid electricity bill)
+- Default inflation rate: **8%** (configurable)
 
-Chart.js (Data visualization)
+### Bill Reduction
+- Estimated generation: **120 units/kW/month**
+- New bill calculation:
 
-Local Storage (Persist configuration and settings)
+---
 
-Development Approach (Rapid Prototyping)
+## ⚙️ How to Run Locally
 
-Logic & Architecture
-Designed mathematical models for ROI, inflation projection, unit generation, and bill reduction to closely match real-world scenarios.
-
-Hands-on Learning Focus
-This project prioritized:
-
-Practical problem solving
-
-Understanding financial calculations in JavaScript
-
-Translating business requirements into functional UI
-
-AI-Assisted UI Development
-AI tools were used to accelerate UI generation and styling, allowing faster iteration and focus on logic and usability.
-
-🧮 Logic Under the Hood
-System Sizing Rules
-
-< 450 units/month → 3kW System
-
-> 450 units/month → 5kW System
-
-Financial Projection
-
-Uses compound interest formula:
-P(1 + r)ⁿ
-to calculate the rising cost of grid electricity
-
-Default inflation rate: 8% (configurable)
-
-Bill Reduction Logic
-
-Estimated generation: 120 units/kW/month
-
-New bill = Consumption − Solar generation + Fixed meter charges (~₹200)
-
-⚙️ How to Run Locally
+```bash
 git clone https://github.com/Ayush-620/Solar-Panel-Cost-ROI-Calculator.git
+ ```` 
 
+1. Navigate to the project folder  
+2. Open `index.html` in any modern browser  
 
-Navigate to the project folder
+✅ **No installation required** — the app runs completely client-side.
 
-Open index.html in any modern browser
+---
 
-✅ No installation required — runs entirely client-side.
+## 🔮 Future Improvements
 
-🔮 Future Improvements
+- PDF export functionality for official quotations  
+- Backend integration to store customer leads  
+- Dynamic state selection to automatically adjust subsidy rules  
+- Enhanced mobile-first UI optimizations  
 
-PDF export for official quotations
+---
 
-Backend integration to store customer leads
+## 👨‍💻 Created By
 
-Dynamic state selection for automatic subsidy calculation
+**Ayush**
 
-Improved mobile-first UI optimizations
-
-👨‍💻 Created By
-
-Ayush
-Built as a practice project to strengthen front-end development skills, financial logic implementation, and hands-on experience with real-world application design.
+Built as a practice project to strengthen front-end development skills, understand financial modeling in JavaScript, and gain hands-on experience with real-world application design.
