@@ -1,0 +1,99 @@
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8f9fa;
+    overflow-x: hidden;
+}
+
+.transition-btn {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.transition-btn:active {
+    transform: scale(0.98);
+}
+
+.fa-spin-hover:hover {
+    animation: fa-spin 4s infinite linear;
+}
+
+.letter-spacing-2 {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+.card {
+    border: none;
+    overflow: hidden;
+}
+.bg-gradient-dark {
+    background: linear-gradient(135deg, #212529 0%, #343a40 100%);
+}
+
+#mainBillInput:focus {
+    box-shadow: none;
+    outline: none;
+}
+.input-group-text {
+    background: transparent;
+}
+
+
+#resultSlide {
+    animation: slideInRight 0.5s ease-out;
+}
+
+.footer-container {
+    margin-top: auto; 
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dev-signature {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 20px;
+    border-radius: 50px; 
+    background-color: rgba(0, 0, 0, 0.03); 
+    border: 1px solid transparent;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.dev-signature:hover {
+    background-color: #ffffff;
+    border-color: #e9ecef;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); 
+    transform: translateY(-3px) scale(1.02);
+}
+
+.dev-text {
+    font-size: 0.85rem;
+    color: #6c757d; 
+    letter-spacing: 0.5px;
+}
+
+.dev-name {
+    font-weight: 800;
+    color: #212529;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Color change on hover */
+.dev-signature:hover .dev-name {
+    background: linear-gradient(45deg, #198754, #20c997); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dev-signature:hover i {
+    color: #212529;
+    transform: rotate(360deg); 
+    transition: transform 0.6s ease;
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
